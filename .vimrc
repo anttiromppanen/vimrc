@@ -1,3 +1,4 @@
+
 " - Avoid using standard Vim directory names like 'plugin'
 
 call plug#begin('~/.vim/plugged')
@@ -19,17 +20,13 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
 
 " Initialize plugin system
 call plug#end()
 
 " General VIM settings
 map <F4> :q<CR>
-inoremap { {}<ESC>ha
-inoremap ( ()<ESC>ha
-inoremap [ []<ESC>ha
-inoremap " ""<ESC>ha
-inoremap ' ''<ESC>ha
 
 set tabstop=2 shiftwidth=2 expandtab
 set nu rnu
@@ -63,4 +60,3 @@ endfunction
 " Execute python
 autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:ter++rows=10 python3 "%"<CR>
 autocmd Filetype python nnoremap <buffer> <F6> :w<CR>:vert ter python3 "%"<CR>
-
