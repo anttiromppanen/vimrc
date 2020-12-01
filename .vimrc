@@ -21,6 +21,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()
@@ -48,7 +50,14 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-" NerdTree
+" Ligtline
+set laststatus=2
+set noshowmode
+
+" Emmet
+let g:user_emmet_leader_key=','
+
+" A NerdTree
 map <C-e> :NERDTreeToggle<CR>
 " NERDTress File highlighting
 
